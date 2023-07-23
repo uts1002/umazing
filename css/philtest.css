@@ -1,0 +1,184 @@
+section#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-sizing: border-box;
+  border: 3px double rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  position: relative;
+}
+/* section#main > h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-0%, -0%);
+  font-size: 16px;
+} */
+section#main > img {
+  margin-top: 10px;
+  width: 50%;
+}
+#startBtn {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: auto;
+  font-size: 1.5rem;
+  background-color: #b9dbdd;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: "GangwonEdu_OTFBoldA";
+}
+#startBtn:active {
+  opacity: 0.7;
+  transform: translateY(2px);
+}
+
+.answerBtn {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin: 10px;
+  background-color: pink;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: "GangwonEdu_OTFBoldA";
+}
+.answerBtn:active {
+  background-color: palevioletred;
+  transform: translateY(2px);
+}
+
+#qna {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin: 30px 0 30px 0;
+  padding: 30px 0 30px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.q {
+  font-size: 1.5rem;
+}
+.a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+#ld_img {
+  width: 100%;
+  height: auto;
+}
+
+#result {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin: 30px 0 30px 0;
+  padding: 30px 0 30px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultBoxName {
+  font-size: 1.5rem;
+  color: blue;
+  margin-bottom: 20px;
+  line-height: 1.5; /* 숫자로 줄간격 설정 */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.resultBox {
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: lightgray;
+  padding: 20px;
+  font-size: 1.2rem;
+  line-height: 1.5; /* 숫자로 줄간격 설정 */
+}
+
+#restart {
+  margin-top: 7vh;
+  margin-bottom: 3vh;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+.wrap-statusbar {
+  width: 100%;
+  border: 1px solid black;
+  height: 20px;
+}
+.statusbar {
+  /* 이전 스타일 코드 */
+  background-color: #ddd;
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 10;
+  /* 새로운 스타일 코드 */
+  left: 0;
+}
+
+.progress-text {
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+#resultImg {
+  margin-bottom: 30px;
+}
+
+#wikilink {
+  margin-top: 30px;
+  font-size: 3rem;
+  text-decoration: underline;
+  color: green;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .resultBox {
+    font-size: 1.5rem;
+  }
+  .resultBoxName {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .answerBtn {
+    font-size: 1.5rem;
+    height: auto;
+    padding: 5px;
+    width: auto;
+  }
+}

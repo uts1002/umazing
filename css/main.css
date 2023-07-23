@@ -1,0 +1,110 @@
+html {
+  font-family: "GangwonEdu_OTFBoldA";
+}
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  text-align: center;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  z-index: 2;
+  border-bottom: 1px solid lightgray;
+  width: inherit;
+  height: 70px;
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+#logo {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0 10px 0 10px;
+}
+#menus {
+  margin-right: 30px;
+}
+#menus * {
+  margin: 0 10px 0 10px;
+}
+#menus > a:active {
+  color: skyblue;
+}
+section.main {
+  z-index: 1;
+  width: 100%;
+  min-height: 700px;
+  box-sizing: border-box;
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("../img/bg-emoji.png");
+  /* background-image: url("../img/bg-space.avif"); */
+  /* background-repeat: no-repeat; */
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 200px;
+}
+.content {
+  box-sizing: border-box;
+  width: 60%;
+  height: 95%;
+  font-family: "GangwonEdu_OTFBoldA";
+}
+footer {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  .container {
+  }
+  #menus {
+    display: none;
+  }
+  #hbgBtn {
+    display: inline-block;
+  }
+  .content {
+    width: 98%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    width: 50%;
+  }
+  section#main > img {
+    margin-top: 10px;
+    width: 30%;
+  }
+}
