@@ -14,20 +14,23 @@
   <link rel="stylesheet" href="./css/philtest.css" />
   <link rel="stylesheet" href="./css/qna.css" />
   <link rel="stylesheet" href="./css/animation.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: "navbar.html",
+        method: "GET",
+        success: function (res) {
+          $("header").html(res);
+        },
+      });
+    });
+  </script>
+
   <body>
     <div class="container">
-      <header>
-        <span id="logo"><a href="index.html">😁Umazing</a></span>
-        <span id="menus">
-          | <a href="test.html">🧘철학자 테스트</a> |
-           <a href="wordle.html">🙈단어 맞추기</a> |</span
-        >
-        <span id="hbgBtn"> <a id="bagmenu">💼</a></span>
-        <nav id="dropdownMenu" style="display: none">
-          <a href="test.html">🧘철학자 테스트</a>
-          <a href="wordle.html">🙈단어 맞추기</a>
-          </nav>
-      </header>
+      <header></header>
       <section class="main">
         <div class="content">
           <section id="main">
