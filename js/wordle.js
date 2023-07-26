@@ -124,8 +124,7 @@ function shareKakao() {
     content: {
       title: "워들 단어 맞추기!!",
       description: `이 분은 ${tryNum}번 만에 맞췄는데.. 당신은 더 잘할 수 있나요??`,
-      imageUrl:
-        "http://k.kakaocdn.net/dn/VSFHJ/btso0s7tLxJ/JOIVsRTyUgKvj5Opu8XDz0/kakaolink40_original.png",
+      imageUrl: "./img/wordleKa.png",
       imageWidth: 238,
       imageHeight: 238,
       link: {
