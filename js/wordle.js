@@ -126,13 +126,15 @@ function shareKakao() {
       description: `이 분은 ${tryNum}번 만에 맞췄는데.. 당신은 더 잘할 수 있나요??`,
       imageUrl:
         "http://k.kakaocdn.net/dn/VSFHJ/btso0s7tLxJ/JOIVsRTyUgKvj5Opu8XDz0/kakaolink40_original.png",
-      imageWidth: 200,
+      imageWidth: 100,
       link: {
         webUrl: "https://umazing.kr",
       },
     },
     itemContent: {
       profileText: "Umazing",
+      titleImageUrl:
+        "http://k.kakaocdn.net/dn/k55bZ/btso4x1bYKW/afE3XKiIHrmUfMtllgu7o1/kakaolink40_original.png",
     },
     buttons: [
       {
