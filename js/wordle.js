@@ -108,12 +108,74 @@ Kakao.init("44e20b070a718e9a7769c38af5e35aa7");
 
 console.log(Kakao.isInitialized());
 
+// function shareKakao() {
+//   Kakao.Share.sendCustom({
+//     templateId: 96487,
+//     templateArgs: {
+//       title: "워들공유",
+//       description: `${tryNum}번 만에 맞췄습니다! 당신은 과연..?`,
+//     },
+//   });
+// }
+
 function shareKakao() {
-  Kakao.Share.sendCustom({
-    templateId: 96487,
-    templateArgs: {
-      title: "워들공유",
-      description: `${tryNum}번 만에 맞췄습니다! 당신은 과연..?`,
+  Kakao.Share.sendDefault({
+    objectType: "feed",
+    content: {
+      title: "워들 단어 맞추기!!",
+      description: `이 분은 ${tryNum}번 만에 맞췄는데.. 당신은 더 잘할 수 있나요??`,
+      imageUrl:
+        "http://k.kakaocdn.net/dn/VSFHJ/btso0s7tLxJ/JOIVsRTyUgKvj5Opu8XDz0/kakaolink40_original.png",
+      link: {
+        webUrl: "https://umazing.kr",
+      },
     },
+    itemContent: {
+      profileText: "😁Umazing",
+      profileImageUrl:
+        "http://k.kakaocdn.net/dn/k55bZ/btso4x1bYKW/afE3XKiIHrmUfMtllgu7o1/kakaolink40_original.png",
+      titleImageText: "Cheese cake",
+      titleImageCategory: "Cake",
+      items: [
+        {
+          item: "Cake1",
+          itemOp: "1000원",
+        },
+        {
+          item: "Cake2",
+          itemOp: "2000원",
+        },
+        {
+          item: "Cake3",
+          itemOp: "3000원",
+        },
+        {
+          item: "Cake4",
+          itemOp: "4000원",
+        },
+        {
+          item: "Cake5",
+          itemOp: "5000원",
+        },
+      ],
+      sum: "총 결제금액",
+      sumOp: "15000원",
+    },
+    buttons: [
+      {
+        title: "웹으로 이동",
+        link: {
+          mobileWebUrl: "https://developers.kakao.com",
+          webUrl: "https://developers.kakao.com",
+        },
+      },
+      {
+        title: "앱으로 이동",
+        link: {
+          mobileWebUrl: "https://developers.kakao.com",
+          webUrl: "https://developers.kakao.com",
+        },
+      },
+    ],
   });
 }
