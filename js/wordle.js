@@ -9,7 +9,8 @@ function getRandomAnswer() {
     ["ㅇ", "ㅕ", "ㄹ", "ㅡ", "ㅁ"],
     ["ㅇ", "ㅓ", "ㅁ", "ㅁ", "ㅏ"],
     ["ㅁ", "ㅓ", "ㄱ", "ㅇ", "ㅣ"],
-
+    ["ㅇ", "ㅣ", "ㄴ", "ㅅ", "ㅏ"],
+    ["ㄱ", "ㅣ", "ㅁ", "ㅊ", "ㅣ"],
     ["ㄱ", "ㅏ", "ㅁ", "ㅈ", "ㅏ"],
     // 다른 리스트들도 추가할 수 있음
   ];
@@ -34,11 +35,11 @@ function submitClick() {
     if (input[i].value == 답[i]) {
       answerCount++;
       console.log(answerCount);
-      input[i].style.background = "green";
+      input[i].style.background = "rgb(88, 214, 141)";
     } else if (답.includes(input[i].value)) {
-      input[i].style.background = "yellow";
+      input[i].style.background = "rgb(249, 231, 159)";
     } else {
-      input[i].style.background = "gray";
+      input[i].style.background = "rgb(213, 216, 220)";
     }
     input[i].classList.remove("input");
   }
@@ -46,68 +47,39 @@ function submitClick() {
     document.querySelector(".tryNum").innerText =
       "정답입니다!!!! 시도횟수: " + tryNum;
 
-    var templateBtn = `<br/><button class="btn-two red rounded" onclick="regame()">다시하기</button><button class="btn-two yellow rounded" onclick="regame">공유하기</button>`;
+    var templateBtn = `<br/><button class="btn-two red rounded" onclick="regame()">다시하기</button><button class="btn-two yellow rounded" onclick="shareKakao()">공유하기</button>`;
 
     document
       .querySelector(".content")
       .insertAdjacentHTML("beforeend", templateBtn);
   } else {
-    tryNum++;
+    if (tryNum == 10) {
+      var template = `<p> 정답은 ${randAnswer} 였습니다!!`;
+      document
+        .querySelector(".content")
+        .insertAdjacentHTML("beforeend", template);
+      var templateBtn = `<br/><button class="btn-two red rounded" onclick="regame()">다시하기</button><button id="kakao-link-btn" class="btn-two yellow rounded" onclick="shareKakao()">공유하기</button>`;
 
-    var template = `<div class="inputs">
-          <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-          <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-          <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-          <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-          <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-          </div>`;
-    document
-      .querySelector(".content")
-      .insertAdjacentHTML("beforeend", template);
+      document
+        .querySelector(".content")
+        .insertAdjacentHTML("beforeend", templateBtn);
+      return;
+    } else {
+      tryNum++;
+      var template = `<div class="inputs">
+      <input type="text" class="input ipStyle" maxlength="1" oninput="checkKorean(this)">
+      <input type="text" class="input ipStyle" maxlength="1" oninput="checkKorean(this)">
+      <input type="text" class="input ipStyle" maxlength="1" oninput="checkKorean(this)">
+      <input type="text" class="input ipStyle" maxlength="1" oninput="checkKorean(this)">
+      <input type="text" class="input ipStyle" maxlength="1" oninput="checkKorean(this)">
+    </div>`;
+
+      document
+        .querySelector(".content")
+        .insertAdjacentHTML("beforeend", template);
+    }
   }
 }
-// submit.addEventListener("click", function () {
-//   var input = document.querySelectorAll(".input");
-//   var 답 = randAnswer;
-//   var answerCount = 0;
-//   document.querySelector(".tryNum").innerText = "시도횟수 : " + tryNum;
-//   console.log(답);
-//   for (i in 답) {
-//     if (input[i].value == 답[i]) {
-//       answerCount++;
-//       console.log(answerCount);
-//       input[i].style.background = "green";
-//     } else if (답.includes(input[i].value)) {
-//       input[i].style.background = "yellow";
-//     } else {
-//       input[i].style.background = "gray";
-//     }
-//     input[i].classList.remove("input");
-//   }
-//   if (answerCount == 5) {
-//     document.querySelector(".tryNum").innerText =
-//       "정답입니다!!!! 시도횟수: " + tryNum;
-
-//     var templateBtn = `<br/><button class="btn-two red rounded" onclick="regame()">다시하기</button><button class="btn-two yellow rounded" onclick="regame">공유하기</button>`;
-
-//     document
-//       .querySelector(".content")
-//       .insertAdjacentHTML("beforeend", templateBtn);
-//   } else {
-//     tryNum++;
-
-//     var template = `<div class="inputs">
-//           <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-//           <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-//           <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-//           <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-//           <input type="text" class="input" maxlength="1" oninput="checkKorean(this)"/>
-//           </div>`;
-//     document
-//       .querySelector(".content")
-//       .insertAdjacentHTML("beforeend", template);
-//   }
-// });
 function regame() {
   location.reload();
 }
@@ -130,4 +102,18 @@ function checkKorean(inputElement) {
       }
     }
   }
+}
+
+Kakao.init("44e20b070a718e9a7769c38af5e35aa7");
+
+console.log(Kakao.isInitialized());
+
+function shareKakao() {
+  Kakao.Share.sendCustom({
+    templateId: 96487,
+    templateArgs: {
+      title: "워들공유",
+      description: "해보시던가",
+    },
+  });
 }

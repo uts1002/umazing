@@ -28,6 +28,12 @@
     .inputs {
       margin: 20px;
     }
+    .ipStyle {
+      box-sizing: border-box;
+      border: 1px solid rgb(0, 0, 0, 0.3);
+      border-radius: 8px;
+      background-color: none;
+    }
 
     @media (max-width: 600px) {
       input {
@@ -37,6 +43,10 @@
       }
     }
   </style>
+  <script
+    type="text/JavaScript"
+    src="https://developers.kakao.com/sdk/js/kakao.min.js"
+  ></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
@@ -73,36 +83,37 @@
               <span style="color: rgb(250, 200, 0)">노란색</span>은 정답에
               있지만 자리는 다른 경우입니다.
             </p>
+            <p style="font-style: italic">기회는 10번 입니다.</p>
           </div>
 
           <p class="tryNum">시도횟수: 0</p>
           <input
             type="text"
-            class="input"
+            class="input ipStyle"
             maxlength="1"
             oninput="checkKorean(this)"
           />
           <input
             type="text"
-            class="input"
+            class="input ipStyle"
             maxlength="1"
             oninput="checkKorean(this)"
           />
           <input
             type="text"
-            class="input"
+            class="input ipStyle"
             maxlength="1"
             oninput="checkKorean(this)"
           />
           <input
             type="text"
-            class="input"
+            class="input ipStyle"
             maxlength="1"
             oninput="checkKorean(this)"
           />
           <input
             type="text"
-            class="input"
+            class="input ipStyle"
             maxlength="1"
             oninput="checkKorean(this)"
           />
