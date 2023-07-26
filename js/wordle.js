@@ -110,7 +110,7 @@ console.log(Kakao.isInitialized());
 
 function shareKakao() {
   Kakao.Share.sendCustom({
-    templateId: `${96487}`,
+    templateId: 96487,
     templateArgs: {
       title: "워들공유",
       description: `${tryNum}번 만에 맞췄습니다! 당신은 과연..?`,
