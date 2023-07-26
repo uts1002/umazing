@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta
+      name="naver-site-verification"
+      content="159d3af9f42384954c5dd18b253e634f1b5afaee"
+    />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6262009230672293"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>😁Umazing</title>
+  </head>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/font.css" />
+  <link rel="stylesheet" href="./css/nav.css" />
+  <link rel="stylesheet" href="./css/lucky.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: "navbar.html",
+        method: "GET",
+        success: function (res) {
+          $("header").html(res);
+        },
+      });
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <header></header>
+      <section class="main">
+        <div class="content"></div>
+      </section>
+      <footer></footer>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/lucky.js"></script>
+  </body>
+</html>
