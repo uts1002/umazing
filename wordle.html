@@ -54,9 +54,25 @@
       <header></header>
       <section class="main">
         <div class="content">
-          <button type="button" class="submit btn-two green rounded">
+          <button
+            type="button"
+            class="submit btn-two green rounded"
+            onclick="submitClick()"
+          >
             정답인가?</button
           ><br />
+          <div class="explain">
+            <p>정답은 자음,모음 5개로 이루어진 한글단어 입니다.</p>
+            <p>
+              ex)답이 감자라고 생각되면 <code>ㄱㅏㅁㅈㅏ</code> 를 입력하세요
+            </p>
+            <p>
+              <span style="color: green">초록색</span>은 정답인 경우,
+              <span style="color: rgb(250, 200, 0)">노란색</span>은 정답에
+              있지만 자리는 다른 경우입니다.
+            </p>
+          </div>
+
           <p class="tryNum">시도횟수: 0</p>
           <input
             type="text"
@@ -90,6 +106,13 @@
           />
         </div>
       </section>
+      <button
+        type="button"
+        class="submit btn-two green rounded"
+        onclick="submitClick()"
+      >
+        정답인가?
+      </button>
       <footer></footer>
     </div>
     <script src="./js/main.js"></script>
