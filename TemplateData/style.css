@@ -17,8 +17,6 @@ body {
 }
 #unity-canvas {
   background: #231f20;
-  width: 80vw;
-  height: 80vh;
 }
 .unity-mobile #unity-canvas {
   width: 95%;
