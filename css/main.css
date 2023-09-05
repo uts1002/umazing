@@ -58,7 +58,7 @@ section.main {
 .content {
   box-sizing: border-box;
   width: 60%;
-  height: 85%;
+  height: 100%;
   font-family: "GangwonEdu_OTFBoldA";
 }
 footer {
