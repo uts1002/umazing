@@ -6,8 +6,17 @@ body {
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 750px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 section.main {
-  justify-content: start;
+  align-items: start;
 }
 #unity-container {
   position: absolute;
