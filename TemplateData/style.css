@@ -12,15 +12,15 @@ body {
 }
 #unity-container.unity-mobile {
   position: fixed;
-  width: 95%;
-  height: 95%;
+  width: 50%;
+  height: 50%;
 }
 #unity-canvas {
   background: #231f20;
 }
 .unity-mobile #unity-canvas {
-  width: 95%;
-  height: 95%;
+  width: 50%;
+  height: 50%;
 }
 #unity-loading-bar {
   position: absolute;
