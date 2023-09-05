@@ -20,17 +20,16 @@ section.main {
 #unity-container.unity-mobile {
   position: relative;
   max-width: 380px;
-  width: 95%;
-
-  height: 95%;
+  width: 97%;
+  height: 97%;
 }
 #unity-canvas {
   background: #231f20;
 }
 .unity-mobile #unity-canvas {
   max-width: 380px;
-  width: 95%;
-  height: 95%;
+  width: 97%;
+  height: 97%;
 }
 #unity-loading-bar {
   position: absolute;
