@@ -6,6 +6,9 @@ body {
   width: 100%;
   height: 100%;
 }
+section.main {
+  justify-content: start;
+}
 #unity-container {
   position: absolute;
 }
@@ -17,17 +20,17 @@ body {
 #unity-container.unity-mobile {
   position: relative;
   max-width: 380px;
-  width: 100%;
+  width: 95%;
 
-  height: 100%;
+  height: 95%;
 }
 #unity-canvas {
   background: #231f20;
 }
 .unity-mobile #unity-canvas {
   max-width: 380px;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
 }
 #unity-loading-bar {
   position: absolute;
